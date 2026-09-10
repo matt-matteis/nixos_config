@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
 
     ../../modules/system/nix-settings.nix
-    ../../modules/system/boot.nix
     ../../modules/system/locale.nix
     ../../modules/system/networking.nix
     ../../modules/system/power.nix
@@ -28,6 +27,15 @@
   ];
 
   networking.hostName = "desktop";
+
+  boot.loader.grub = {
+    enable = true;
+    device = "nodev";
+    efiSupport = true;
+    useOSProber = true;
+  };
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot";
 
   # The NixOS release this machine was first installed from. This is stateful
   # data compatibility, not a version to keep current — never bump it on an

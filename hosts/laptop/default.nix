@@ -5,10 +5,8 @@
     ./hardware-configuration.nix
 
     ../../modules/system/nix-settings.nix
-    ../../modules/system/boot.nix
     ../../modules/system/locale.nix
     ../../modules/system/networking.nix
-    ../../modules/system/power.nix
 
     ../../modules/hardware/firmware.nix
     ../../modules/hardware/audio.nix
@@ -25,6 +23,12 @@
   ];
 
   networking.hostName = "laptop";
+
+  boot.loader.grub = {
+    enable = true;
+    device = "/dev/sda";
+    useOSProber = true;
+  };
   
   system.stateVersion = "26.05";
 }

@@ -1,0 +1,8 @@
+result
+result-*
+.direnv/
+.envrc.local
+*~
+*.swp
+*.swo
+.*.sw[a-p]

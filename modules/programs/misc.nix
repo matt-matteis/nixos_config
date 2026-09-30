@@ -3,7 +3,9 @@
 {
   environment.systemPackages = with pkgs; [
     spotify
-    claude-code
     discord
+
+    # From nixpkgs-unstable rather than stable - see modules/system/unstable.nix.
+    unstable.claude-code
   ];
 }

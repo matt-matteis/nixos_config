@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
 
     ../../modules/system/nix-settings.nix
+    ../../modules/system/unstable.nix
     ../../modules/system/locale.nix
     ../../modules/system/networking.nix
     ../../modules/system/power.nix

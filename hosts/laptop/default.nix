@@ -16,6 +16,7 @@
 
     ../../modules/programs/browsers.nix
     ../../modules/programs/editors.nix
+    ../../modules/programs/shell.nix
     ../../modules/programs/cli-tools.nix
     ../../modules/programs/dev.nix
     ../../modules/programs/misc.nix

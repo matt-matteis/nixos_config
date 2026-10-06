@@ -7,5 +7,6 @@
     jq
     file
     tcpdump
+    unzip
   ];
 }
